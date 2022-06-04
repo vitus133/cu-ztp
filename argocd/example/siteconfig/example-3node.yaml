@@ -19,7 +19,6 @@ spec:
         include:
           - 03-sctp-machine-config-master.yaml
           - 06-kdump-master.yaml
-          - disk-encryption.yaml.tmpl
     networkType: "OVNKubernetes"
     clusterLabels:
       # These example cluster labels correspond to the bindingRules in the PolicyGenTemplate examples in ../policygentemplates:
