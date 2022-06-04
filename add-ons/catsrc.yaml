@@ -1,0 +1,14 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+ name: ran-operators-us
+ namespace: openshift-marketplace
+spec:
+ displayName: RAN Operators
+ image: quay.io/vgrinber/talo-index:latest
+ priority: -400
+ publisher: Red Hat
+ sourceType: grpc
+ updateStrategy:
+   registryPoll:
+     interval: 10m0s
