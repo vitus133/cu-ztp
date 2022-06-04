@@ -63,7 +63,7 @@ spec:
                 ipv4:
                   enabled: true
                   address:
-                    - ip: 10.8.34.30
+                      - ip: 10.8.34.30
                       prefix-length: 24
                 ipv6:
                   enabled: false
@@ -102,7 +102,7 @@ spec:
                 ipv4:
                   enabled: true
                   address:
-                  - ip: 10.8.34.31
+                    - ip: 10.8.34.31
                       prefix-length: 24
                 ipv6:
                   enabled: false
@@ -141,7 +141,7 @@ spec:
                 ipv4:
                   enabled: true
                   address:
-                  - ip: 10.8.34.32
+                    - ip: 10.8.34.32
                       prefix-length: 24
                 ipv6:
                   enabled: false
