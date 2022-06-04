@@ -18,12 +18,8 @@ spec:
   osImages:
   - cpuArchitecture: x86_64
     openshiftVersion: "4.10"
-    rootFSUrl: https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/pre-release/latest-4.9/rhcos-live-rootfs.x86_64.img
-    url: https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/pre-release/latest-4.9/rhcos-live.x86_64.iso
+    rootFSUrl: https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/4.10/latest/rhcos-live-rootfs.x86_64.img
+    url: https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/4.10/latest/rhcos-live.x86_64.iso
     version: "4.10"
-  - cpuArchitecture: x86_64
-    openshiftVersion: "4.11"
-    rootFSUrl: https://releases-rhcos.cloud.privileged.psi.redhat.com/storage/testing/hhei-4.11-8.6/411.86.202204180210-0/x86_64/rhcos-411.86.202204180210-0-live-rootfs.x86_64.img
-    url: https://releases-rhcos.cloud.privileged.psi.redhat.com/storage/testing/hhei-4.11-8.6/411.86.202204180210-0/x86_64/rhcos-411.86.202204180210-0-live.x86_64.iso
-    version: "4.11"
+
           
