@@ -13,6 +13,9 @@ spec:
   sshPublicKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCyKUTkHymCfDrKtWYA7wgwcdxB3805IYOHKvIzTNLEVzMDr0btXa+dzrW53XyWFAMnlFvrg3s3nHeXav+EzuCOIEkNdBESypg4sUSx4qQa9jpqRHEKvGRALj9w9vBnINS2FzlvPn0Q7G8QW6jO4gMY5/F5C+scPqrcqFngl3TDLhfIemfSVJqY0Eofdp89oFhYwDaRaIIfOybdwDj049sYIaEUfNOutgrwIzs5l+1UJNCE5ZdLQlOGAO1iHNQWptJ/zEXfMwRBN98q5FkJJxmAmUlMJWmZ7wQsjkqtYiHcESwSlH9RHFzBKKwdubud8G/buFyAdDqRT8iEwT++taWgSYr72IWD1l8GMaEgT1yxHTX6KyrLEWF5cAP1TCwVy5xtJaWyXAZ/83Hm31WfN8oV4rZAscOPXFEqwLw5gMruKM0q+hUReonQR8XOH0pDspXGawDb218DVIx+D2yDjMBN+A0L5/QZRUh4OfAgq4DlDeQNUH3wIwrUn6zlQTeOXFc= root@hv6.telco5gran.eng.rdu2.redhat.com"
   clusters:
   - clusterName: "cnfdf12"
+    extraManifests:
+      filter:
+        inclusionDefault: exclude  
     networkType: "OVNKubernetes"
     clusterLabels:
       # These example cluster labels correspond to the bindingRules in the PolicyGenTemplate examples in ../policygentemplates:
