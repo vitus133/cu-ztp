@@ -4,12 +4,14 @@ metadata:
  name: agent
 spec:
   databaseStorage:
+    storageClassName: ocs-storagecluster-cephfs
     accessModes:
     - ReadWriteOnce
     resources:
       requests:
         storage: 20Gi
   filesystemStorage:
+    storageClassName: ocs-storagecluster-cephfs
     accessModes:
     - ReadWriteOnce
     resources:
