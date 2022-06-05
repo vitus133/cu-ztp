@@ -37,6 +37,8 @@ spec:
     ingressVIP: 10.8.34.74
     serviceNetwork:
       - 172.30.0.0/16
+    machineNetwork:
+      - cidr: 10.8.34.0/24
     additionalNTPSources:
       - 1.pool.ntp.org
     # Optionally; This can be used to override the KlusterletAddonConfig that is created for this cluster:
