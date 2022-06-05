@@ -55,7 +55,7 @@ spec:
         # Use UEFISecureBoot to enable secure boot for this node
         bootMode: "UEFI"
         rootDeviceHints:
-          hctl: '0:1:0'
+          deviceName: "/dev/nvme0n1"
         nodeNetwork:
           interfaces:
             - name: eno1
@@ -94,7 +94,7 @@ spec:
         bootMACAddress: "3c:ec:ef:5f:e0:d6"
         bootMode: "UEFI"
         rootDeviceHints:
-          hctl: '0:1:0'
+          deviceName: "/dev/nvme0n1"
         nodeNetwork:
           interfaces:
             - name: eno1
@@ -133,7 +133,7 @@ spec:
         bootMACAddress: "3c:ec:ef:5f:5d:36"
         bootMode: "UEFI"
         rootDeviceHints:
-          hctl: '0:1:0'
+          deviceName: "/dev/nvme0n1"
         nodeNetwork:
           interfaces:
             - name: eno1
