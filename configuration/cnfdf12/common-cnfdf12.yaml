@@ -1,0 +1,43 @@
+---
+apiVersion: ran.openshift.io/v1
+kind: PolicyGenTemplate
+metadata:
+  name: "common-cnfdf12"
+  namespace: "ztp-common-cnfdf12"
+spec:
+  bindingRules:
+    # These policies will correspond to all clusters with this label:
+    common-cu: true
+  sourceFiles:
+    # Create operators policies that will be installed in all clusters
+    - fileName: SriovSubscription.yaml
+      policyName: "subscriptions-policy"
+      spec:
+        channel: "stable"
+    - fileName: SriovSubscriptionNS.yaml
+      policyName: "subscriptions-policy"
+    - fileName: SriovSubscriptionOperGroup.yaml
+      policyName: "subscriptions-policy"
+    - fileName: ClusterLogNS.yaml
+      policyName: "subscriptions-policy"
+    - fileName: ClusterLogOperGroup.yaml
+      policyName: "subscriptions-policy"
+    - fileName: ClusterLogSubscription.yaml
+      policyName: "subscriptions-policy"
+    - fileName: StorageNS.yaml
+      policyName: "subscriptions-policy"
+    - fileName: StorageOperGroup.yaml
+      policyName: "subscriptions-policy"
+    - fileName: StorageSubscription.yaml
+      policyName: "subscriptions-policy"
+      spec:
+        channel: "stable"
+    - fileName: PaoSubscription.yaml
+      policyName: "subscriptions-policy"
+      spec:
+        channel: "4.10"
+    - fileName: PaoSubscriptionNS.yaml
+      policyName: "subscriptions-policy"
+    - fileName: PaoSubscriptionOperGroup.yaml
+      policyName: "subscriptions-policy"
+

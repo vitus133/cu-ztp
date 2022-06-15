@@ -1,5 +1,0 @@
-generators:
-- common-ran-cu.yaml
-- group-cu-compact.yaml
-resources:
-- ns.yaml

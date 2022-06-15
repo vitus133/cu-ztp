@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ztp-cnfdf12-policies
+  labels:
+    name: ztp-cnfdf12-policies
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ztp-common-cnfdf12
+  labels:
+    name: ztp-common-cnfdf12
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ztp-group-cnfdf12
+  labels:
+    name: ztp-group-cnfdf12

@@ -1,0 +1,57 @@
+apiVersion: ran.openshift.io/v1
+kind: PolicyGenTemplate
+metadata:
+  name: "cnfdf12"
+  namespace: "ztp-cnfdf12-policies"
+spec:
+  bindingRules:
+    # These policies will correspond to all clusters with this label:
+    sites: "cnfdf12"
+  mcp: "master"
+  sourceFiles:
+    
+    - fileName: SriovNetwork.yaml
+      policyName: "config-policy"
+      metadata:
+        name: "f1u-network"
+      spec:
+        resourceName: uplane
+        vlan: 140
+    
+    - fileName: SriovNetworkNodePolicy.yaml
+      policyName: "config-policy"
+      metadata:
+        name: "sriov-nnp-uplane"
+      spec:
+        deviceType: vfio-pci
+        isRdma: false
+        nicSelector:
+          pfNames: ["ens1f1"]
+        nodeSelector:
+          node-role.kubernetes.io/master: ""
+        numVfs: 8
+        priority: 10
+        resourceName: uplane    
+    
+    - fileName: SriovNetwork.yaml
+      policyName: "config-policy"
+      metadata:
+        name: "f1c-network"
+      spec:
+        resourceName: cplane
+        vlan: 150
+
+    - fileName: SriovNetworkNodePolicy.yaml
+      policyName: "config-policy"
+      metadata:
+        name: sriov-nnp-cplane
+      spec:
+        deviceType: netdevice
+        isRdma: true
+        nicSelector:
+          pfNames: ["ens1f0"]
+        nodeSelector:
+          node-role.kubernetes.io/master: ""
+        numVfs: 8
+        priority: 10
+        resourceName: cplane
